@@ -1,0 +1,15 @@
+        <mat-list *ngFor="let Nota of notas0" id="N0">
+            <!-- "Card or button goes here" -->
+            <button mat-button *ngIf="Nota.estado == 0" id="Abierto" (click)="select(Nota)">{{Nota.titulo}}</button>
+        </mat-list>
+        <mat-list *ngFor="let Nota of notas1" id="N1">
+            <!-- "Card or button goes here" -->
+            <button mat-button *ngIf="Nota.estado == 1" id="Progreso" (click)="select(Nota)" >{{Nota.titulo}}</button>
+        </mat-list>
+        <mat-list *ngFor="let Nota of notas2" id="N2">
+            <!-- "Card or button goes here" -->
+            <button mat-button *ngIf="Nota.estado == 2" id="Cerrado" (click)="select(Nota)">{{Nota.titulo}}</button>
+        </mat-list>
+
+    <span> <button *ngIf="isValid()" (click)="destroy()" mat-stroked-button >Eliminar</button>
+            <button *ngIf="isEditable()" [routerLink]="['/view', this.buttonAux.titulo]" routerLinkActive="router-link-active" mat-stroked-button>Editar</button> </span> <!-- Routing a notas update -->

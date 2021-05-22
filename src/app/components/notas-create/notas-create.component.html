@@ -1,0 +1,25 @@
+<body>
+    <form [formGroup]="formulario"  (ngSubmit)="crear()" id="form">
+        <ul>
+            <div id="Text"><mat-form-field>
+                <mat-label>Titulo</mat-label>
+                <input matInput type="text"  required formControlName="Titulo">
+            </mat-form-field></div>
+            <div id="Select"><mat-form-field>
+                <mat-label>Estado</mat-label>
+                <mat-select formControlName="Estado" required>
+                  <mat-option *ngFor="let estado of estados" [value]="estado.value">
+                    {{estado.view}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field></div>
+            <div id="Area"><mat-form-field>
+                <mat-label>Descripción</mat-label>
+                <textarea  matInput formControlName="Descripcion" required></textarea>
+            </mat-form-field></div>
+        </ul> 
+        <button (click)="crear()" mat-stroked-button [disabled]="!formulario.valid" [routerLink]="['/view']" routerLinkActive="router-link-active" >Crear Nota </button>
+        <!-- <button type="submit"  mat-stroked-button [disabled]="!formulario.valid" [routerLink]="['/view']" routerLinkActive="router-link-active" >Crear Nota</button> -->
+        <!-- Me pregunto poeque se rompio el submit? -->
+    </form>    
+</body>

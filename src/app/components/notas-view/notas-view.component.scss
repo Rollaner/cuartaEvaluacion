@@ -1,0 +1,38 @@
+span{
+    width: 200%;
+    display: block;
+    float: bottom;
+}
+#N0{
+    display: flex;
+    width: 33%;
+    height: 10%;
+    float: left;
+}
+#N1{
+    display: flex;
+    width: 33%;
+    height: 10%;
+    float: center; 
+  }
+#N2{
+    display: flex;
+    width: 33%;
+    height: 10%;
+    float: right;
+}
+#Abierto{
+    display: inherit;
+    width: 33%;
+    background-color:rgb(161, 255, 161);
+}
+#Progreso{
+    display: inherit;
+    width: 33%;
+    background-color: paleturquoise;
+}
+#Cerrado{
+    display: inherit;
+    width: 33%;
+    background-color:palevioletred;
+}
